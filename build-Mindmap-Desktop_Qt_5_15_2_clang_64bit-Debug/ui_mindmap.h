@@ -32,8 +32,8 @@ public:
     QSpacerItem *horizontalSpacer;
     QSpacerItem *verticalSpacer_2;
     QGridLayout *gridLayout_2;
-    QSpacerItem *verticalSpacer;
     QTextEdit *textEdit;
+    QSpacerItem *verticalSpacer;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -48,17 +48,17 @@ public:
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         horizontalSpacer_2 = new QSpacerItem(320, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout_4->addItem(horizontalSpacer_2, 2, 2, 1, 1);
+        gridLayout_4->addItem(horizontalSpacer_2, 3, 2, 1, 1);
 
         pushButtonAdd = new QPushButton(centralwidget);
         pushButtonAdd->setObjectName(QString::fromUtf8("pushButtonAdd"));
         pushButtonAdd->setEnabled(true);
 
-        gridLayout_4->addWidget(pushButtonAdd, 2, 1, 1, 1);
+        gridLayout_4->addWidget(pushButtonAdd, 3, 1, 1, 1);
 
         horizontalSpacer = new QSpacerItem(321, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout_4->addItem(horizontalSpacer, 2, 0, 1, 1);
+        gridLayout_4->addItem(horizontalSpacer, 3, 0, 1, 1);
 
         verticalSpacer_2 = new QSpacerItem(20, 150, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
@@ -66,10 +66,6 @@ public:
 
         gridLayout_2 = new QGridLayout();
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        verticalSpacer = new QSpacerItem(20, 150, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        gridLayout_2->addItem(verticalSpacer, 1, 0, 1, 1);
-
         textEdit = new QTextEdit(centralwidget);
         textEdit->setObjectName(QString::fromUtf8("textEdit"));
 
@@ -77,6 +73,10 @@ public:
 
 
         gridLayout_4->addLayout(gridLayout_2, 1, 0, 1, 3);
+
+        verticalSpacer = new QSpacerItem(20, 150, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_4->addItem(verticalSpacer, 2, 1, 1, 1);
 
         Mindmap->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Mindmap);
