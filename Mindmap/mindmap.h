@@ -4,7 +4,9 @@
 #include <QMainWindow>
 #include <QGridLayout>
 #include <QPushButton>
-using namespace std;
+#include <QLabel>
+
+#include "itemManager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Mindmap; }
@@ -25,8 +27,17 @@ private:
     Ui::Mindmap *ui;
 
     QGridLayout *layout;
-    vector<vector<QPushButton *>> buttons;
+    std::vector<std::vector<QPushButton *>> buttons;
     int num_hor;
     int num_ver;
+    IdeaBox* IBox;
+    ItemManager* mainItemManager;
+
+    // Confirm output
+    QLabel* debugWidget1;
+    QLabel* debugWidget2;
+
+    void setupDebugWindow();
+
 };
 #endif // MINDMAP_H
